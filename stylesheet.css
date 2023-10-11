@@ -28,7 +28,10 @@ body
     font-size: 25px;
     color: #fff;
     text-decoration: none;
-    font-weight: 600;    
+    font-weight: 600; 
+    cursor:default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;   
 }
 .navbar a {
     display: inline-block;
@@ -38,6 +41,8 @@ body
     font-weight: 500;
     margin-left: 35px;
     transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
 }
 .navbar a:hover{
     color: #0ef;
@@ -47,7 +52,7 @@ body
     width:100%;
     justify-content:space-between ;
     height: 100vh;
-    background: url(photo\back.png)no-repeat;
+    background: url(photo\backg.png)no-repeat;
     background-size:cover;
     background-position: center;
     display: flex;
@@ -60,6 +65,12 @@ body
 .home-content h3 {
     font-size: 32px;
     font-weight: 700;
+}
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 30px;
+}
+.home-content h3 span {
+color:#0ef;
 }
 .home-content h1 {
   font: size 56px;  
@@ -106,3 +117,26 @@ body
     0 0 100px cyan, 0 0 200px cyan
 
 }
+
+
+@keyframes slideRight{
+    0%{
+        transform:translatex(-100px);
+        opacity: 0;
+    }
+   100%{
+        transform:translatex(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideTop{
+    0%{
+        transform:translatey(-100px);
+        opacity: 0;
+    }
+   100%{
+        transform:translatey(0px);
+        opacity: 1;
+    }
+}
+
