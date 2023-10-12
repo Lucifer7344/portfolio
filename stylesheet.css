@@ -32,6 +32,7 @@ body
     cursor:default;
     opacity: 0;
     animation: slideRight 1s ease forwards;   
+
 }
 .navbar a {
     display: inline-block;
@@ -52,7 +53,7 @@ body
     width:100%;
     justify-content:space-between ;
     height: 100vh;
-    background: url(photo\backg.png)no-repeat;
+    background: url(photo/backg.png)no-repeat;
     background-size:cover;
     background-position: center;
     display: flex;
@@ -65,6 +66,9 @@ body
 .home-content h3 {
     font-size: 32px;
     font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
 }
 .home-content h3:nth-of-type(2) {
     margin-bottom: 30px;
@@ -76,10 +80,14 @@ color:#0ef;
   font: size 56px;  
   font-weight: 700;
   margin: -3px 0;
-
+  animation: slideRight 1s ease forwards;
+  animation-delay: 1s;
 }
 .home-content p {
     font-size: 20px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
 }
 .home-sci a {
  display: inline-flex;
@@ -93,6 +101,11 @@ color:#0ef;
  font-size: 20px;
  color: #0ef;
  text-decoration: none;
+ transition: .5s ease;
+ opacity: 0;
+ animation: slideLeft 1s ease forwards;
+ animation-delay: calc(.2s * var(--i));
+
  margin: 30px 15px 30px 0;
 }
 .home-sci a:hover{
@@ -129,7 +142,27 @@ color:#0ef;
         opacity: 1;
     }
 }
+@keyframes slideLeft{
+    0%{
+        transform:translatex(100px);
+        opacity: 0;
+    }
+   100%{
+        transform:translatex(0px);
+        opacity: 1;
+    }
+}
 @keyframes slideTop{
+    0%{
+        transform:translatey(100px);
+        opacity: 0;
+    }
+   100%{
+        transform:translatey(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideBottom{
     0%{
         transform:translatey(-100px);
         opacity: 0;
@@ -139,4 +172,6 @@ color:#0ef;
         opacity: 1;
     }
 }
+
+
 
