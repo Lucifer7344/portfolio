@@ -5,3 +5,5 @@ var typed= new Typed('.Text', {
     backDelay: 1000,
     loop:true,
 })
+
+
